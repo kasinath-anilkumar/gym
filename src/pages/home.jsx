@@ -6,7 +6,7 @@ import Features from "./features";
 import HorizontalScroll from "./horizontalScroll";
 import Contact from "./contact";
 import Footer from "../components/footer";
-import Trainers from "./trainers";
+import Trainers from "./Trainers";
 import Testimonials from "./Testimonials";
 import FloatingButtons from "./FloatingButtons";
 import Transformations from "./Transformations ";
