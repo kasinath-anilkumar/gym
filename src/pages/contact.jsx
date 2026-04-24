@@ -20,7 +20,7 @@ const Contact = () => {
 
           <div className="space-y-4 text-gray-300">
             <p>📍 Kochi, Kerala</p>
-            <p>📞 +91 9890 9822 23</p>
+            <p>📞 +91 0000 0000 00</p>
             <p>⏰ Mon - Sat: 6AM - 10PM</p>
           </div>
         </div>

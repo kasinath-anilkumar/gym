@@ -25,7 +25,7 @@ const HorizontalScroll = () => {
     <section className="bg-black text-white">
 
       {/* Heading */}
-      <div className="text-center py-4">
+      <div className="text-center pt-4">
         <p className="text-red-500 uppercase tracking-[0.3em] text-sm mb-3">
           Transformation
         </p>

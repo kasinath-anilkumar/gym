@@ -2,30 +2,30 @@ import React from "react";
 
 const trainers = [
   {
-    name: "Arjun",
+    name: "Alex",
     role: "Strength Coach",
-    image: "https://static.vecteezy.com/system/resources/thumbnails/046/837/306/small/fitness-trainer-smiling-in-gym-with-dumbbells-diverse-trainer-health-and-wellness-promotion-professional-athlete-strength-training-coach-photo.jpg",
+    image: "https://images.unsplash.com/photo-1579758629938-03607ccdbaba?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Z3ltJTIwY29hY2h8ZW58MHx8MHx8fDA%3D",
   },
   {
-    name: "Arun",
+    name: "David",
     role: "Bodybuilding Expert",
-    image: "https://digitalasset.intuit.com/content/dam/intuit/cg/en_us/turbotax/tax-tips/images/self-employed/gym-instructor-wearing-tshirt-im-the-coach_inf31364.jpg",
+    image: "https://images.unsplash.com/photo-1738523686578-f18348c8292b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGd5bSUyMGNvYWNofGVufDB8fDB8fHww",
   },
   {
-    name: "Priya",
+    name: "May",
     role: "Fitness Trainer",
-    image: "https://www.citywoofer.com/blog/wp-content/uploads/2023/05/MG_0468-225x400.jpg",
+    image: "https://images.unsplash.com/photo-1571388072750-31a921b3d900?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGd5bSUyMGNvYWNofGVufDB8fDB8fHww",
   },
   {
-    name: "Akash",
+    name: "John",
     role: "Fitness Trainer",
-    image: "https://www.uaepersonaltrainers.com/wp-content/uploads/2022/10/Abu-Dhabi-Personal-Trainer-and-Fitness-Coach-Gerald-Gruen-e1719216246554.jpg",
+    image: "https://images.unsplash.com/photo-1701481080490-cb2e7f4fd5f8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGd5bSUyMGNvYWNofGVufDB8fDB8fHww",
   },
 ];
 
 const Trainers = () => {
   return (
-    <section  id="trainers" className="bg-black text-white py-20">
+    <section  id="trainers" className="bg-black text-white pt-20">
       <div className="max-w-7xl mx-auto px-6 text-center">
 
         {/* Heading */}

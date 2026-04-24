@@ -1,4 +1,101 @@
 @import "tailwindcss";
+
+/* ============================= */
+/* 🔥 BASE */
+/* ============================= */
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* ============================= */
+/* 🔥 GLOBAL VERTICAL SCROLLBAR */
+/* ============================= */
+
+/* Chrome, Edge, Safari */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    rgba(239, 68, 68, 0.7),
+    rgba(239, 68, 68, 0.4)
+  );
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(239, 68, 68, 1);
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(239, 68, 68, 0.6) transparent;
+}
+
+/* ============================= */
+/* 🔥 HORIZONTAL SCROLLBAR */
+/* ============================= */
+
+.scrollbar-x {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/* Chrome */
+.scrollbar-x::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scrollbar-x::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 4px;
+}
+
+.scrollbar-x::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    90deg,
+    rgba(239, 68, 68, 0.7),
+    rgba(239, 68, 68, 0.4)
+  );
+  border-radius: 999px;
+  transition: all 0.25s ease;
+}
+
+.scrollbar-x::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(239, 68, 68, 1),
+    rgba(239, 68, 68, 0.6)
+  );
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.4);
+}
+
+/* ============================= */
+/* 🔥 HIDE SCROLLBAR (MOBILE) */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .scrollbar-x {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-x::-webkit-scrollbar {
+    display: none;
+  }
 }

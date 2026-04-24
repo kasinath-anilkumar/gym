@@ -9,17 +9,24 @@ import Footer from "../components/footer";
 import Trainers from "./trainers";
 import Testimonials from "./Testimonials";
 import FloatingButtons from "./FloatingButtons";
+import Transformations from "./Transformations ";
+import Timeline from "./Timeline";
+import Gallery from "./Gallery";
+
 
 const Home = () => {
   return (
-    <div id="#home">
+    <div id="home">
       <Header />
         <Hero />
-        <Pricing />
         <Features />
+        <Pricing /> 
+        <Transformations />
+        <Timeline />
         <HorizontalScroll />
         <Trainers />
         <Testimonials />
+        <Gallery />
         <Contact />
         <Footer />
       <FloatingButtons />

@@ -46,18 +46,30 @@ const Hero = () => {
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp delay-500">
-          <button className="bg-red-600 hover:bg-black px-6 sm:px-8 py-3 rounded-full font-semibold transition shadow-lg shadow-red-900/40">
-            Join Now
-          </button>
+<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp delay-500">
 
-<a
-  href="#pricing"
-  className="border text-center border-white/30 hover:border-red-500 px-6 sm:px-8 py-3 rounded-full transition inline-block"
->
-  View Plans
-</a>
-        </div>
+  {/* PRIMARY CTA */}
+  <button className="group relative px-6 sm:px-8 py-3 rounded-full font-medium overflow-hidden border border-white/20 text-white">
+  
+  {/* sliding background */}
+  <span className="absolute inset-0 bg-red-600 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out" />
+  
+  {/* text */}
+  <span className="relative z-10 group-hover:text-white transition">
+    Join Now
+  </span>
+
+</button>
+
+  {/* SECONDARY CTA */}
+  <a
+    href="#pricing"
+    className="px-6 sm:px-8 py-3 rounded-full font-medium text-white/80 border border-white/20 backdrop-blur-md hover:text-white hover:border-white/40 transition-all duration-300 text-center"
+  >
+    View Plans
+  </a>
+
+</div>
 
       </div>
     </section>

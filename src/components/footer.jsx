@@ -1,5 +1,4 @@
-import React from "react";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
@@ -56,7 +55,7 @@ const Footer = () => {
             </p>
 
             <p className="flex items-center gap-2">
-              <Phone size={16} /> +91 98765 43210
+              <Phone size={16} /> +91 0000 0000 00
             </p>
 
             <p className="flex items-center gap-2">
