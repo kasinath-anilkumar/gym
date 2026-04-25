@@ -13,8 +13,8 @@ const Hero = () => {
       />
 
       {/* Overlays */}
-      <div className="absolute inset-0 bg-black/70"></div>
-      <div className="absolute inset-0 bg-gradient-to-e from-black via-black/80 to-transparent"></div>
+      <div className="absolute inset-0 bg-black/20"></div>
+<div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent"></div>
 
       {/* Glow */}
       <div className="absolute w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-red-600/20 blur-[120px] -left-20 top-[20%]"></div>
@@ -45,26 +45,44 @@ const Hero = () => {
           Push your limits with professional trainers and world-class equipment.
         </p>
 
-        {/* Buttons */}
 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fadeInUp delay-500">
 
   {/* PRIMARY CTA */}
-  <button className="group relative px-6 sm:px-8 py-3 rounded-full font-medium overflow-hidden border border-white/20 text-white">
-  
-  {/* sliding background */}
-  <span className="absolute inset-0 bg-red-600 -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out" />
-  
-  {/* text */}
-  <span className="relative z-10 group-hover:text-white transition">
-    Join Now
-  </span>
+  <button className="group relative px-6 sm:px-8 py-3 rounded-full font-medium overflow-hidden border border-white/20 text-white active:scale-95 transition">
+    
+    {/* glow background (better than slide) */}
+    <span className="
+      absolute inset-0 bg-red-600/90 opacity-0
+      group-hover:opacity-100
+      group-active:opacity-100
+      transition duration-300
+    " />
 
-</button>
+    {/* neon glow */}
+    <span className="
+      absolute inset-0 blur-xl bg-red-500/40 opacity-0
+      group-hover:opacity-100
+      group-active:opacity-100
+      transition duration-300
+    " />
+
+    {/* text */}
+    <span className="relative z-10">
+      Join Now
+    </span>
+
+  </button>
 
   {/* SECONDARY CTA */}
   <a
     href="#pricing"
-    className="px-6 sm:px-8 py-3 rounded-full font-medium text-white/80 border border-white/20 backdrop-blur-md hover:text-white hover:border-white/40 transition-all duration-300 text-center"
+    className="
+      px-6 sm:px-8 py-3 rounded-full font-medium text-white/80 
+      border border-white/20 backdrop-blur-md text-center
+      hover:text-white hover:border-white/40
+      active:scale-95 active:bg-white/10
+      transition-all duration-300
+    "
   >
     View Plans
   </a>

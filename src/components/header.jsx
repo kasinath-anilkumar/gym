@@ -44,48 +44,84 @@ const Header = () => {
   return (
     <>
       {/* Header */}
-<header className="fixed w-full z-50 bg-black/70 backdrop-blur-md border-b border-white/10">
-  <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<header className="fixed w-full z-50">
+
+  {/* 🔥 Mobile Glass Background */}
+  <div className="md:hidden absolute inset-0 
+    bg-gradient-to-b from-black/60 to-black/20 
+    backdrop-blur-2xl border-b border-white/10
+    shadow-[inset_0_1px_1px_rgba(255,255,255,0.08),0_8px_30px_rgba(0,0,0,0.4)]" />
+
+  {/* Content */}
+  <div className="relative max-w-7xl mx-auto px-6 py-4 flex items-center justify-center md:justify-between">
 
     {/* LOGO */}
-    <h2 className="text-2xl md:text-3xl font-bold text-white tracking-wide">
-      <span className="text-red-500">Gym</span>Fit
+    <h2 className="text-2xl md:text-3xl font-bold text-white tracking-wide z-10">
+      <span className="text-red-500 drop-shadow-[0_0_6px_rgba(239,68,68,0.7)]">
+        Gym
+      </span>
+      Fit
     </h2>
 
-    {/* NAV */}
-    <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-      {["home", "about", "pricing", "trainers", "contact"].map((item) => (
-        <a
-          key={item}
-          href={`#${item}`}
-          className="relative group text-white/70 hover:text-white transition"
+
+    {/* DESKTOP NAV (Floating Pill) */}
+    <div className="hidden md:flex absolute left-1/2 -translate-x-1/2">
+  <div className="relative flex items-center gap-2 px-2 py-2 rounded-full 
+    bg-gradient-to-b from-white/10 to-white/5
+    backdrop-blur-3xl border border-white/10
+    shadow-[inset_0_1px_1px_rgba(255,255,255,0.15),0_10px_40px_rgba(0,0,0,0.35)]">
+
+    {["home", "about", "pricing", "trainers", "contact"].map((item) => (
+      <a
+        key={item}
+        href={`#${item}`}
+        onClick={() => setActive(item)}
+        className="group relative px-4 py-1.5 text-sm font-medium transition"
+      >
+
+        {/* 🔴 RED GLASS ACTIVE / HOVER */}
+        <span
+          className={`absolute inset-0 rounded-full transition-all duration-300
+          ${
+            active === item
+              ? "bg-gradient-to-br from-red-500/40 to-red-600/30 backdrop-blur-xl shadow-[inset_0_1px_2px_rgba(255,255,255,0.4),0_0_20px_rgba(239,68,68,0.35)]"
+              : "bg-transparent group-hover:bg-white/10"
+          }`}
+        />
+
+        {/* ✨ moving light reflection */}
+        <span className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition duration-500 
+          bg-gradient-to-r from-transparent via-white/30 to-transparent blur-sm" />
+
+        {/* text */}
+        <span
+          className={`relative z-10 transition ${
+            active === item
+              ? "text-white"
+              : "text-white/70 group-hover:text-white"
+          }`}
         >
           {item.charAt(0).toUpperCase() + item.slice(1)}
+        </span>
 
-          {/* 🔥 underline animation */}
-          <span className="absolute left-0 -bottom-2 h-[2px] w-0 bg-red-500 transition-all duration-300 group-hover:w-full" />
-        </a>
-      ))}
-    </nav>
-
-    {/* CTA */}
-   <div className="hidden md:block">
-  <a
-    href="#pricing"
-    className="group relative inline-flex items-center justify-center px-6 py-2 rounded-full text-sm font-semibold text-red-500 border border-red-500 overflow-hidden transition-all duration-300 ease-out"
-  >
-    {/* background fill */}
-    <span className="absolute inset-0 bg-red-600 scale-x-0 origin-left transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100" />
-
-    {/* subtle glow */}
-    <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-red-500/20 blur-md" />
-
-    {/* text */}
-    <span className="relative z-10 transition-colors duration-300 delay-75 group-hover:text-white">
-      Join Now
-    </span>
-  </a>
+      </a>
+    ))}
+  </div>
 </div>
+
+    {/* CTA (Right side) */}
+    <div className="hidden md:block z-10">
+      <a
+        href="#pricing"
+        className="px-5 py-2 rounded-full text-sm font-semibold 
+        bg-red-600 text-white 
+        shadow-[0_0_15px_rgba(239,68,68,0.6)]
+        hover:shadow-[0_0_25px_rgba(239,68,68,0.9)]
+        transition duration-300"
+      >
+        Join Now
+      </a>
+    </div>
 
   </div>
 </header>
